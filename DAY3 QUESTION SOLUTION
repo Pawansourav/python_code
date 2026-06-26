@@ -1,0 +1,16 @@
+# Sum of Natural Numbers
+
+def sum_num(n):
+    res = 1
+    if n == 0:
+        return 0
+    else:
+        for i in range(n):
+            res = res + i
+        return res
+        
+        
+
+n = 0
+final_res = sum_num(n)
+print(final_res)
