@@ -1,0 +1,14 @@
+# REPLACE ZEROS WITH 5
+
+def Replace(n):
+    new_n = str(n)
+    res = ""
+    for char in new_n:
+        if char == "0":
+            res = res + "5"
+        else:
+            res = res + char
+    return res
+n = 1005
+final_res = Replace(n)
+print(final_res)
