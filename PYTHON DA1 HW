@@ -1,0 +1,16 @@
+DA1 HOMEWORK 
+# odd even FROM ARRY
+
+def odd_even(arr):
+    odd = 0
+    even = 0
+    
+    for char in arr:
+        if char%2==0:
+            even+=1
+        else:
+            odd+=1
+    return odd,even
+arr = [1,2,3,4,5]
+result = odd_even(arr)
+print(result)
