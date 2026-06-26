@@ -1,0 +1,12 @@
+# Change the string in uppercase or lowercase
+
+def Replace_string(s):
+    for char in s:
+        if ord(char) in range(97,123):
+            return(s.lower())
+        else:
+            return(s.upper())
+    
+s = "AbCd"
+final = Replace_string(s)
+print(final)
