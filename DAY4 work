@@ -1,0 +1,43 @@
+# Count type of Characters
+def count(s):
+    lower = 0
+    upper = 0
+    number = 0
+    spe = 0
+   
+    
+    for char in s:
+        if ord(char) in range(97,123):
+            lower+=1
+        elif ord(char) in range(65,90):
+            upper+=1
+        elif ord(char) in range(48,57):
+            number+=1
+        else:
+            spe+=1
+    return lower,upper,number,spe
+        
+s = S = "#GeeKs01fOr@gEEks07"
+final = count(s)
+print(final)
+
+################################################################################
+# HOME WORK QUESTION FOR DAY4
+# Count of camel case characters
+def count(s):
+    count = 0
+    for char in s:
+        if ord(char) in range(65,91):
+            count+=1
+    return count
+s = "ckjkUUYII"    
+final = count(s)
+print(final)
+
+
+
+
+
+
+
+
