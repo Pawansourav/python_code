@@ -1,0 +1,69 @@
+
+# Check if a string is Isogram or not
+# TAKING o(**n) solution
+
+def Isogram(s):
+    for i in range(len(s)):
+        res = s[i]
+        
+        for j in range(i+1,len(s)):
+            if res == s[j]:
+                return -1
+            else:
+                continue
+    return 1
+            
+s = "machinie"
+final = Isogram(s)
+print(final)
+
+#####################################################################################
+# Optimization of my code in O(n) SOLUTION 
+
+# Check if a string is Isogram or not
+def Isogram(s):
+    dic = {}
+    for char in s:
+        if char in dic:
+            dic[char] = dic[char] + 1
+        else:
+            dic[char] =1
+    for key,value in dic.items():
+        if value > 1:
+            return -1
+        else:
+            continue
+    return 1
+            
+s = "machine"
+final = Isogram(s)
+print(final)
+
+#######################################################################
+##### writting with again ....
+class Solution:
+    def isIsogram(self,s):
+        #Your code here
+        dic = {}
+        for char in s:
+            if char in dic:
+                return False
+            else:
+                dic[char]=1
+        return True
+HOMEWORK QUESTION ################ HOME WORK QUESTION 
+
+# Delete alternate characters
+
+def delete(s):
+    res = ""
+    for i in range(len(s)):
+        if i % 2 ==0:
+            res = res + s[i]
+        else:
+            continue
+    return res
+            
+s = "GeeksforGeeks"
+final = delete(s)
+print(final)
